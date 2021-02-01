@@ -1,0 +1,14 @@
+﻿@page "/VerDatos"
+<h3>VerDatosGuardados</h3>
+
+<p>Dato Sencillo</p>
+<p>@DatoSimple</p>
+
+<br />
+<p>Dato Objeto</p>
+<p>Id: @Persona.Id</p>
+<p>Nombre: @Persona.Nombre</p>
+<p>Apellidos @Persona.Apellidos</p>
+<p>Activo</p>
+<input type="checkbox"
+       checked="@(Persona.Activo ? true : false)"/>
