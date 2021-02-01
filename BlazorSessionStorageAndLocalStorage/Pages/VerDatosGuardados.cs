@@ -1,4 +1,5 @@
 ﻿using BlazorSessionStorageAndLocalStorage.Enum;
+using BlazorSessionStorageAndLocalStorage.Helpers;
 using BlazorSessionStorageAndLocalStorage.Modelos;
 using BlazorSessionStorageAndLocalStorage.OS.Interfaces;
 using Microsoft.AspNetCore.Components;
@@ -17,7 +18,7 @@ namespace BlazorSessionStorageAndLocalStorage.Pages
         protected async override Task OnInitializedAsync()
         {
             DatoSimple = await LocalStorage.GetValue<string>(ValuesKeys.DatoSimple);
-            Persona = await LocalStorage.GetValue<Persona>(ValuesKeys.Persona);
+            Persona = IsDataNull.CreateInstanceIfIsNull<Persona>(await LocalStorage.GetValue<Persona>(ValuesKeys.Persona));
         }
       
     }
