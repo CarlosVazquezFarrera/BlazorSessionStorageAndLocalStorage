@@ -3,15 +3,18 @@
     using BlazorSessionStorageAndLocalStorage.Enum;
     using BlazorSessionStorageAndLocalStorage.Helpers;
     using BlazorSessionStorageAndLocalStorage.OS.Interfaces;
-    using Microsoft.AspNetCore.Components;
     using Microsoft.JSInterop;
     using System.Text.Json;
     using System.Threading.Tasks;
 
     public class LocalStorage : ILocalStorage
     {
-        [Inject]
-        private JSRuntime JSRuntime { get; set; }
+        public LocalStorage(IJSRuntime jsRuntime)
+        {
+            this.JSRuntime = jsRuntime;
+        }
+        private readonly IJSRuntime JSRuntime;
+
         private  readonly string tipoDeAlmacenamiento = "sessionStorage.";
         public async Task ClearAll()
         {
