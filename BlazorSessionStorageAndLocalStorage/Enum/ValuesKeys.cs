@@ -3,6 +3,6 @@
     public enum ValuesKeys
     {
         DatoSimple,
-        Usuario
+        Persona
     }
 }

@@ -1,0 +1,33 @@
+﻿@page "/DatoComplejo"
+<h3>DatoComplejo</h3>
+
+<form>
+    <div class="mb-3">
+        <label class="form-label">Id</label>
+        <input @bind-value="Persona.Id"
+               type="text"
+               class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Nombre</label>
+        <input @bind-value="Persona.Nombre"
+               type="text"
+               class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Apellidos</label>
+        <input @bind-value="Persona.Apellidos"
+               type="text"
+               class="form-control">
+    </div>
+    <div class="mb-3">
+        <label class="form-label">Actibo</label>
+        <input @bind-value="Persona.Activo"
+               type="checkbox">
+    </div>
+    <button @onclick="GuardarObjeto"
+            class="btn btn-primary"
+            type="button">
+        Guardar objeto
+    </button>
+</form>
