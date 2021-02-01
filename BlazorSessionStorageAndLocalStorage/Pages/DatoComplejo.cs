@@ -1,10 +1,9 @@
-﻿using BlazorSessionStorageAndLocalStorage.Enum;
-using BlazorSessionStorageAndLocalStorage.Modelos;
-using BlazorSessionStorageAndLocalStorage.OS.Interfaces;
-using Microsoft.AspNetCore.Components;
-
-namespace BlazorSessionStorageAndLocalStorage.Pages
+﻿namespace BlazorSessionStorageAndLocalStorage.Pages
 {
+    using BlazorSessionStorageAndLocalStorage.Enum;
+    using BlazorSessionStorageAndLocalStorage.Modelos;
+    using BlazorSessionStorageAndLocalStorage.OS.Interfaces;
+    using Microsoft.AspNetCore.Components;
     public partial class DatoComplejo
     {
         [Inject]
